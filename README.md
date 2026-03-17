@@ -45,6 +45,7 @@ _Identify variables, parameters, equations. List your assumptions._
 ### Equations
 
 **Governing Equation**:
+
 $$
 \begin{align}
 \frac{dx}{dt} &= \alpha x - \beta xy - \varepsilon xz\\
@@ -55,63 +56,6 @@ $$
 
 $$
 x(0) = x_0, \quad y(0) = y_0, \quad z(0) = z_0
-$$
-
-**Nondemonization**:
-
-Step 1: The population $x$, $y$, and $z$ are the dependent variables; time $t$ is the independent variables.
-
-Step 2: Let $t = [t]t^*$, $x = [x]x^*$, $y = [y]y^*$, $z = [z]z^*$, and substitude these into the equations:
-$$
-\begin{aligned}
-\frac{[x]}{[t]}\frac{dx^*}{dt^*} &= \alpha [x]x^* - \beta [x][y]x^*y^* - \varepsilon [x][z]x^*z^*\\
-\frac{[y]}{[t]}\frac{dy^*}{dt^*} &= -\gamma [y]y^* + \delta [x][y]x^*y^*\\
-\frac{[z]}{[t]}\frac{dz^*}{dt^*} &= \xi [z]z^* - \sigma [x][z]x^*z^*
-\end{aligned}
-$$
-
-$$
-[x]x^*(0) = x_0 \quad [y]y^*(0) = y_0, \quad [z]z^*(0) = z_0
-$$
-
-Step 3: Divide the first 2 eauqtions with the coefficients of $x^*y^*$, and the third one with the coefficent of $x^*z^*$
-$$
-\begin{aligned}
-\frac{1}{\beta [y][t]}\frac{dx^*}{dt^*} &= \frac{\alpha}{\beta[y]} x^* - x^*y^* - \frac{\varepsilon [z]}{\beta [y]}x^*z^*\\
-\frac{1}{\delta [x][t]}\frac{dy^*}{dt^*} &= -\frac{\gamma}{\delta[x]}y^* + x^*y^*\\
-\frac{1}{\sigma [x][t]}\frac{dz^*}{dt^*} &= \frac{\xi}{\sigma[x]}z^* - x^*z^*
-\end{aligned}
-$$
-
-$$
-x^*(0) = \frac{x_0}{[x]} \quad y^*(0) = \frac{y_0}{[y]}, \quad z^*(0) = \frac{z_0}{[z]}
-$$
-
-Step 4: We choose:
-$$
-[x] = \frac{\gamma}{\delta}, \quad [y]= \frac{\alpha}{\beta}, \quad[z] = \frac{\alpha}{\varepsilon}
-$$
-Since we can not choose a $[t]$ such that all coefficients are 1, so we choose from:
-$$
-[t] = \frac{1}{\alpha}, \quad [t] = \frac{1}{\gamma}, \quad [t] = \frac{\delta}{\sigma \gamma}
-$$
-Let $[t] = \frac{1}{\alpha}$
-
-Step 5: We rewrite the equations:
-$$
-\begin{aligned}
-\frac{dx^*}{dt^*} &= x^* - x^*y^* - x^*z^*\\
-\frac{dy^*}{dt^*} &= a(-y^* + x^*y^*)\\
-\frac{dz^*}{dt^*} &= bz^* - cx^*z^*
-\end{aligned}
-$$
-$$
-x^*(0) = dx_0, \quad y^*(0) = ey_0, \quad z^*(0) = fz_0
-$$
-
-where:
-$$
-a = \frac{\gamma}{\alpha},\quad b = \frac{\xi}{\alpha}, \quad c = \frac{\sigma \gamma}{\alpha \delta},  \quad d = \frac{\delta}{\gamma}, \quad e = \frac{\beta}{\alpha},  \quad f = \frac{\varepsilon}{\alpha}
 $$
 
 ### Assumptions
