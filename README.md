@@ -1,6 +1,6 @@
 # MATH461_Unit01
 
-![image](data/image.png)
+<img src="data/image.png" height="500" width="700">
 
 ## Problem description
 
